@@ -1,4 +1,4 @@
-package ca.pcuets.core.config;
+package ca.simplestore.server.config;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +20,7 @@ public class CorsFilterConfig {
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
 
-        config.addAllowedOrigin("http://localhost:3000");
+        config.addAllowedOrigin("http://localhost:4200");
 
         source.registerCorsConfiguration("/**", config);
 
