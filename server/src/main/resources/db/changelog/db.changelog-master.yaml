@@ -1,0 +1,30 @@
+databaseChangeLog:
+- changeSet:
+        id: init-database
+        author: cchartrand
+        changes:
+            - createTable:
+                tableName: PRODUCT
+                columns:
+                    - column:
+                        name: id_product
+                        type: int(11)
+                        autoIncrement: true
+                        constraints:
+                            primaryKey: true
+                            nullable: false
+                    - column:
+                        name: name
+                        type: varchar(255)
+                        constraints:
+                            nullable: false
+                    - column:
+                        name: description
+                        type: mediumtext
+                        constraints:
+                            nullable: false
+                    - column:
+                        name: price
+                        type: float
+                        constraints:
+                            nullable: false
