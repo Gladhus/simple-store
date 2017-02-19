@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Product } from  '../models/product.model';
-import { ProductService } from '../product.service';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-catalog',
@@ -16,6 +16,10 @@ export class CatalogComponent implements OnInit {
 
   	ngOnInit() {
   		this.productService.getAll().subscribe(products => this.products = products);
+  	}
+
+  	addToCart(product) {
+  		alert(product.name + ' was added to cart.');
   	}
 
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductService } from './product.service';
+import { ProductService } from './services/product.service';
 
 
 @Component({
@@ -9,5 +9,5 @@ import { ProductService } from './product.service';
   providers: [ProductService]
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Simple Store';
 }

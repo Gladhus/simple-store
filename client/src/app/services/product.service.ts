@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
-import { Product } from './models/product.model';
+import { Product } from '../models/product.model';
 
 @Injectable()
 export class ProductService {

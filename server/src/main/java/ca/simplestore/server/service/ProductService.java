@@ -19,7 +19,6 @@ public class ProductService {
 
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<Collection<ProductEntity>> getAllProducts(){
-        System.out.println("Get received.");
         return new ResponseEntity<>((Collection<ProductEntity>) productDao.findAll(), HttpStatus.OK);
     }
 
