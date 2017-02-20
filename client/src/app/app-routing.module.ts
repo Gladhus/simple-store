@@ -5,7 +5,9 @@ import { CatalogComponent } from './catalog/catalog.component';
 
 export const routes: Routes = [
   { path: 'shoppingcart', loadChildren: 'app/shoppingcart/shoppingcart.module#ShoppingcartModule' },
-  { path: '', component: CatalogComponent }
+  { path: 'productdetails/:id', loadChildren: 'app/productdetails/productdetails.module#ProductdetailsModule' },
+  { path: '', component: CatalogComponent },
+  { path: 'productdetails', component: CatalogComponent }
 ];
 
 @NgModule({
