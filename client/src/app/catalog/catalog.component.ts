@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Product } from  '../models/product.model';
+import { CartItem } from '../models/cartitem.model';
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -10,16 +11,34 @@ import { ProductService } from '../services/product.service';
 })
 export class CatalogComponent implements OnInit {
 
-	products : Product[] = [];
+  products : Product[] = [];
+  shoppingCart : CartItem[] = [];
 
-  	constructor(private productService : ProductService) { }
+  constructor(private productService : ProductService) {  }
 
-  	ngOnInit() {
-  		this.productService.getAll().subscribe(products => this.products = products);
-  	}
+  ngOnInit() {
+    this.productService.getAll().subscribe(products => this.products = products);
 
-  	addToCart(product) {
-  		alert(product.name + ' was added to cart.');
-  	}
+    var storageCart = JSON.parse(localStorage.getItem("shoppingCart"));
+    if (storageCart != null){
+      this.shoppingCart = storageCart;
+    }
+  }
 
+  addToCart(product) {
+
+    if ( this.shoppingCart[product.id] == null ){
+      this.shoppingCart[product.id] = <CartItem> {
+        product: product,
+        quantity: 1,
+        totalPrice: product.price
+      };
+    } else {
+      this.shoppingCart[product.id].quantity = this.shoppingCart[product.id].quantity + 1;
+      this.shoppingCart[product.id].totalPrice = this.shoppingCart[product.id].totalPrice + product.price;
+    }
+    localStorage.setItem("shoppingCart", JSON.stringify(this.shoppingCart));
+
+    alert(product.name + ' was added to your cart.');
+  }
 }

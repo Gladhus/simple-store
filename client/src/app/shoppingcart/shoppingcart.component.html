@@ -1,3 +1,14 @@
-<p>
-  shoppingcart works!
-</p>
+<div class="well">
+    <h2 class="text-center">Shopping Cart</h2>
+    <div class="panel panel-primary" *ngFor="let cartItem of shoppingCart">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{cartItem.quantity}} x {{cartItem.product.name}}</h3>
+            <h3 class="panel-title text-right">{{cartItem.totalPrice}} $</h3>
+        </div>
+        <div class="panel-body">{{cartItem.product.description}}</div>
+ 
+    </div>
+    <div>
+          <button class="btn-primary" (click)="clearCart()">Clear shopping cart</button>
+    </div>
+</div>
