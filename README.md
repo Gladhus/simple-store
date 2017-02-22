@@ -13,5 +13,6 @@ To run :
 ## Client
 The client app is made with AngularJS 2 using angular-cli. 
 To run, from the client folder : 
+ - npm install -g @angular/cli
  - npm install
  - ng serve
