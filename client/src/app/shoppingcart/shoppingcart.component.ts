@@ -41,9 +41,4 @@ export class ShoppingcartComponent implements OnInit {
     localStorage.removeItem("shoppingCart");
     location.reload();
   }
-
-  removeItem(cartItem){
-    this.shoppingCart = this.shoppingCart.filter(item => item != cartItem);
-    localStorage.setItem("shoppingCart", JSON.stringify(this.shoppingCart));
-  }
 }
