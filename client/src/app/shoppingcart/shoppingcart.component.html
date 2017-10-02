@@ -8,7 +8,6 @@
         x {{cartItem.product.name}}
       </h3>
       <h3 class="panel-title text-right">{{cartItem.totalPrice | number:'2.2-2'}} $</h3>
-      <h3 class="panel-title remove-item" (click)="removeItem(cartItem)">Remove</h3>
     </div>
     <div class="panel-body">{{cartItem.product.description}}</div>
 
