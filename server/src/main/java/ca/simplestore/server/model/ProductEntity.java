@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @Entity
-@Table(name = "PRODUCT")
+@Table(name = "product")
 public class ProductEntity {
     @Id
     @GeneratedValue

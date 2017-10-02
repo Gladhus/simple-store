@@ -4,7 +4,7 @@ databaseChangeLog:
     author: cchartrand
     changes:
         - createTable:
-            tableName: PRODUCT
+            tableName: product
             columns:
                 - column:
                     name: id_product
