@@ -27,14 +27,21 @@ export class ShoppingcartComponent implements OnInit {
   }
 
   updateQuantity(cartItem, quantity: number) {
-    this.shoppingCart.forEach(item => {
-      if (item == cartItem) {
-        const pricePerOne = item.totalPrice / item.quantity;
-        item.quantity = quantity;
-        item.totalPrice = quantity * pricePerOne;
-      }
-    });
-    localStorage.setItem("shoppingCart", JSON.stringify(this.shoppingCart));
+    if(quantity != 0 && !isNaN(quantity)) // Fixed a bug that causes price to act weird.
+    {
+      this.shoppingCart.forEach(item => {
+        if (item == cartItem) {
+          const pricePerOne = item.totalPrice / item.quantity;
+          item.quantity = quantity;
+          item.totalPrice = quantity * pricePerOne;
+        }
+      });
+      localStorage.setItem("shoppingCart", JSON.stringify(this.shoppingCart));
+    }
+    else{
+      alert('Please enter a proper quantity number.');
+    }
+    
   }
 
   clearCart(){
