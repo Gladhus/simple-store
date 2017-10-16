@@ -4,13 +4,16 @@
     <table class="table table-hover">
         <tr>
             <th>Name</th>
+            <th class="text-right">Quantity</th>
             <th class="text-right">Price</th>
             <th></th>
         </tr>
         <tr *ngFor="let product of products">
             <td><a [routerLink]="['/productdetails', product.id]">{{product.name}}</a></td>
-            <td class="text-right">{{product.price}} $</td>
-            <td class="text-right"><button class="btn-primary" (click)="addToCart(product)">Add to cart</button></td>
+            <td class="text-right"><input type="text"  size="2" value="1" id="quantity-input" (change)="updateQuantity()"></td>
+            <td class="text-right">{{product.price}}  $</td>
+            <td class="text-right"><button class="btn-primary" (click)="addToCart(product,1)">Add to cart</button></td>
+            <!-- 1 parameter at addToCart(product,1) is just for default input value, it doesnt affect anything, -->
         </tr>
     </table>
 </div>

@@ -28,8 +28,8 @@ export class ProductdetailsComponent implements OnInit, OnDestroy {
     this.sub.unsubscribe();
   }
 
-  addToCart(product) {
-    this.productService.addToCart(product);
+  addToCart(product,productQuantity) {
+    this.productService.addToCart(product,productQuantity);
   }
 
 }
