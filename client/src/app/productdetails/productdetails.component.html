@@ -1,9 +1,9 @@
 <div class="panel panel-primary" *ngIf="product">
     <div class="panel-heading">
-        <h3 class="panel-title">{{product.name}}</h3>
-        <h3 class="panel-title text-right">{{product.price}} $</h3>
+        <h3 class="panel-title" data-test="productName">{{product.name}}</h3>
+        <h3 class="panel-title text-right" data-test="productPrice">{{product.price}} $</h3>
     </div>
-    <div class="panel-body">{{product.description}}</div>
+    <div class="panel-body" data-test="productDesc">{{product.description}}</div>
     <div class="panel-footer text-right">
       <button class="btn-primary" [routerLink]="['']">Back to catalog</button>
       <button class="btn-primary" (click)="addToCart(product)">Add to cart</button>
