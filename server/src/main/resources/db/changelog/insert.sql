@@ -15,3 +15,11 @@ INSERT INTO product (name, description, price) VALUES ('Television','You just bo
 INSERT INTO product (name, description, price) VALUES ('Sound System','This sound system will take your movie nights to the next level.', 1299.99);
 INSERT INTO product (name, description, price) VALUES ('Mattress','Sleepy all day? Tired all the time? Sleeping on the hardwood floors does not seem like a good idea anymore? This mattress will change your life for the better!', 499.99);
 INSERT INTO product (name, description, price) VALUES ('Pillow','Who would not want a thick bag of feathery goodness to lay their head upon?', 9.99);
+INSERT INTO product (name, description, price) VALUES ('Bed Base', 'The problem with buying a mattress is that you have nowhere to put it! Well look no more, we have exactly what you need.', 399.99);
+INSERT INTO product (name, description, price) VALUES ('Running Shoes', 'Shoes that are useful for running', 69.99);
+INSERT INTO product (name, description, price) VALUES ('Hiking Shoes', 'Shoes made for hiking', 129.99);
+INSERT INTO product (name, description, price) VALUES ('Fashion Shoes', 'Shoes for that gala night you need to go to!', 259.99);
+INSERT INTO product (name, description, price) VALUES ('T-Shirt', 'A plain whit T', 9.99);
+INSERT INTO product (name, description, price) VALUES ('Jeans', 'Wake up the cowboy sleeping inside of you', 79.99);
+INSERT INTO product (name, description, price) VALUES ('Microsoft Word', 'For those office needs !', 89.99);
+INSERT INTO product (name, description, price) VALUES ('Macbook Pro 16', 'The brand new Macbook Pro 16 inches', 2699.99);
